@@ -7,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataBindingComponent {
 
-  title = "Data Binding"
-  description = "This is data-binding.component"
-  
-  name = "Praveen Kumar"
+  public title = "Data Binding";
+  public description = "This is data-binding.component";  
+  public name = "Praveen Kumar";
+  public firstDiv = "div1";
+  public textPrimary = "text-primary";
+  public employee = { name : 'Praveen Kumar', designation : 'Software Engineer'}
 
-  employee = { name : 'Praveen Kumar', designation : 'Software Engineer'}
+  public isDisabled = false;
+  public textOrange = "orange";
+  public hasError = true;
+
+  public textStyles = {
+    color: 'red',
+    textDecoration:'underline'
+  }
+
 
 
 }

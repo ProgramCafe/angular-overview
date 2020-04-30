@@ -28,7 +28,30 @@ It represents one-way data binding. Basically it is used to fetch data from comp
 ```
 
 ## 2. Property Binding
-Basically, property binding is used to set the property of html element dynamically. It is used to to set the properties of html elements like id, name, value, class and etc. The syntax of property binding is using [].
+Basically, property binding is used to set the property of html element dynamically. It is used to to set the properties of html elements like id, name, value, class and etc. 
+
+The syntax of property binding is using **[ ]** to inclose the property name or use **bind-** as prefix to the property name.
+
+*Syntax of Property Binding*
+1. [propertyName]="property value"
+1. bind-propertyName = "property value"
+
+**Note:** *We can bind properties of html element using **interpolation** as well but there is some limitation into interpolation. That's why we use **Property Binding**.
+
+Interpolation doesn't work with boolean type property.
+*
+
+Example:
+
+```html
+<input [value]="Praveen Kumar" type="text">
+<input bind-value="Praveen Kumar" type="text">
+
+<input [id]="txt1" type="text">
+<input [id]="txt1" type="text">
+
+```
+
 
 ```typescript
 isDisabled = true;
