@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jumpstart';
+  title = 'Component: AppComponent';
+  description = "This is App Component." 
 }

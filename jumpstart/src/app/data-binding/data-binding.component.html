@@ -1,0 +1,41 @@
+<div>
+    <h3>{{title}}</h3>
+    <p>{{description}}</p>
+    <hr>    
+</div>
+
+
+<div>
+    <h4>1. Interpolation</h4>    
+     <!-- Example1: -->
+    <i>Example 1: Using a string property</i>
+    <p class=binding>name: {{name}}</p>
+    <i>Note:- I am just displaying the value of property 'name' which is written into 'data-binding.ts' file</i>        
+    
+    <!-- Example 2: -->
+    <app-line></app-line>
+    <i>Example 2: Using Numeric Expression To Evaluate</i>
+    <p class=binding>10 + 5 -   5 = {{10 + 5 - 5}}</p>
+    <i>Note:- Here I am displaying the sum of 10 + 5 - 5 using interpolation</i>        
+    
+
+    <!-- Example 3: -->
+    <app-line></app-line>
+    <i>Example 3: Using Object Property</i>
+    <p class=binding>employee.name: {{employee.name}}</p>
+    <p class=binding>employee.designation: {{employee.designation}}</p>
+    <i>Note:- Here I am displaying the property value of employe object using interpolation</i>  
+
+</div>
+
+<hr>
+<!-- Property Binding -->
+<div>
+    <h4>2. Property Binding</h4>    
+     <!-- Example 1: -->
+    <i>Example 1: Using a string property</i>
+    <input type="text" value="name" />
+    
+    <i>Note:- I am just displaying the value of property 'name' which is written into 'data-binding.ts' file</i>        
+    
+</div>

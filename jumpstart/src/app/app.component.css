@@ -1,0 +1,6 @@
+body{background-color:#1d1717!important;color: #ffffff;}
+
+nav .navbar-brand {color: #ffffff; cursor: default;}
+nav .navbar-brand:hover,.navbar-brand:visited {color:#ffffff;}
+nav .bg-primary{background-color:#749825}
+nav.navbar-default, nav.navbar{border:none!important;}
