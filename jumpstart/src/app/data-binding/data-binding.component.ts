@@ -23,6 +23,24 @@ export class DataBindingComponent {
     textDecoration:'underline'
   }
 
+//#region Event Binding
+
+  public counter = 0;
+
+  updateCounter() {
+    this.counter += 1;
+  }
+
+  logEventName(event){
+    console.log('Event Type is:  ' + event.type);
+  }
+
+//#endregion
+
+// constructor(){}
+// ngOnInit(){
+  
+// }
 
 
 }

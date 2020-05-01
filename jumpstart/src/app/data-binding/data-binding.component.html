@@ -16,7 +16,7 @@
     <app-line></app-line>
     <i><b>Example 2:</b> Using Numeric Expression To Evaluate</i>
     <p class=binding>10 + 5 -   5 = {{10 + 5 - 5}}</p>
-    <i>Note:- Here I am displaying the sum of 10 + 5 - 5 using interpolation</i>        
+    <i ngNonBindable>Note:- Here I am displaying the sum of {{10 + 5 - 5}} using interpolation</i>        
     
 
     <!-- Example 3: -->
@@ -83,11 +83,18 @@
         <div [class]="textPrimary">I am text-primary class</div>
         <p class="binding">[class]="textPrimary"</p>
 
+        <app-line></app-line>
         <div bind-class="textPrimary">I am text-primary class</div>
         <p class="binding">bind-class="textPrimary"</p>
 
+        <app-line></app-line>
         <div class="{{textPrimary}}">I am text-primary class</div>
         <p class="binding">doubleCurly class doubleCurlyClose="textPrimary"</p>
+
+        <app-line></app-line>
+        <h5 [ngClass]="'text-primary bg-success'">Sample Text</h5>
+        <p class="binding">This text is styled using two class <b>text-primary</b> and <b>bg-success</b></p>
+
     </div>
 
     <!-- Example 4: -->
@@ -108,31 +115,55 @@
             Only angular property binding will work</i>
     </div>
 
-        <!-- Example 5 -->
+    <!-- Example 5 -->
+    <app-line></app-line>
+    <div>
+        <i><b>Example 5:</b>Property binding for <b>STYLE</b> property</i>
+        
+        <h5 [style.color]="'orange'">Orange Text</h5>
+        <p class="binding">[style.color]="'orange'"</p>
+
         <app-line></app-line>
-        <div>
-            <i><b>Example 5:</b>Property binding for <b>STYLE</b> property</i>
-            
-            <h5 [style.color]="'orange'">Orange Text</h5>
-            <p class="binding">[style.color]="'orange'"</p>
+        <h5 bind-style.color="'Yellow'">Yellow Text</h5>
+        <p class="binding">bind-style.color="'Yellow'"</p>
+
+        <app-line></app-line>
+        <h5 [style.color]="textOrange">Dynamic Color</h5>
+        <p class="binding">[style.color]="textOrange"</p>
+
+        <app-line></app-line>
+        <h5 [style.color]="hasError ? 'red' : 'green'">Text orange and bg-primary</h5>
+        <p class="binding">[style.color]="textStyles"</p>
+
+        <app-line></app-line>
+        <h5 [ngStyle]="textStyles">This text is underlined and red.</h5>
+        <p class="binding">Here color and text-decoration styles are used using <b>[ngStyle]</b> directive</p>
+
+
+    </div>
+
+</div>
+
+
+<hr>
+<!-- Event Binding -->
+<div>
+    <h4>3. Event Binding</h4>
+
+    <!-- Example 1: -->
+    <i><b>Example 1:</b> Using a <b>CLICK</b> event </i>
+    <button (click)="updateCounter()" >Add</button>
+    <label>{{counter}}</label>     
+    <p class="binding"><b>Syntax: </b>(click)="updateCounter()"</p>
+    <i><b>Note: </b>Here, I have binded a click event on a button to incrase the counter variable on every click.</i>
+
+    <app-line></app-line>
+    <i><b>Example 1:</b> Using a <b>CLICK</b> event, Print event type </i>
+    <button (click)="logEventName($event)" >Add</button>
+    <label>{{counter}}</label>
+
     
-            <app-line></app-line>
-            <h5 bind-style.color="'Yellow'">Yellow Text</h5>
-            <p class="binding">bind-style.color="'Yellow'"</p>
+     
 
-            <app-line></app-line>
-            <h5 [style.color]="textOrange">Dynamic Color</h5>
-            <p class="binding">[style.color]="textOrange"</p>
-
-            <app-line></app-line>
-            <h5 [style.color]="hasError ? 'red' : 'green'">Text orange and bg-primary</h5>
-            <p class="binding">[style.color]="textStyles"</p>
-
-            <h5 [ngStyle]="textStyles">[ngStyle] directive to bind multiple stles together</h5>
-
-            <h5 [ngClass]="'text-primary bg-primary'">dfdfdfd</h5>
-
-
-        </div>
 
 </div>
